@@ -1,10 +1,10 @@
 # Javascript Libraries
 
 ## arrayIndexOf
-library: [lib/arrayIndexOf.js](lib/arrayIndexOf.js)
+library: [arrayIndexOf/ib/arrayIndexOf.js](arrayIndexOf/lib/arrayIndexOf.js)
 
-minified library: [lib/arrayIndexOf.min.js](lib/arrayIndexOf.min.js)
+minified library: [arrayIndexOf/lib/arrayIndexOf.min.js](arrayIndexOf/lib/arrayIndexOf.min.js)
 
-demo: clone repository and view demo in your browser *demos/arrayIndexOf.html*
+demo: clone repository and view demo in your browser *arrayIndexOf/demo.html*
 
 This polyfill adds indexOf Prototype to Array if not existant (i.e. IE8)
