@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head><title>Demo Array IndexOf Polyfill</title></head>
+<body>
+  <h1>Demo Array Index Of Polyfill</h1>
+  <div><strong>Original Array:</strong> <span id="original"></span></div>
+  <div><strong>Search Object:</strong> <span id="searchobj"></span></div>
+  <div><strong>From Index:</strong> <span id="fromindex"></span></div>
+  <div><strong>Object Index:</strong> <span id="result"></span></div>
+  <script src="lib/arrayIndexOf.js" language="javascript" type="text/javascript"></script>
+  <script language="javascript" type="text/javascript">
+    (function() {
+      // declare variables
+      var myArray;
+      var myObject;
+      var myFromIndex;
+      var myIndex;
+      var comma;
+      var i;
+      var myArrayStr;
+      var myObjectStr;
+
+      // initialise variables
+      myArray = ["Tim","Harry","Jordan"];
+      myObject = "Tim";
+      myFromIndex = 1;
+      myArrayStr = "";
+      comma = "";
+      myObjectStr = "";
+      // run script
+      myIndex = myArray.indexOf(myObject, myFromIndex);
+
+      // set up strings for display
+      myArrayStr = "[";
+      comma = "";
+      for (i = 0; i < myArray.length; i++) {
+          myArrayStr += comma + '"' + myArray[i] + '"';
+          comma = ', ';
+      }
+      myArrayStr += "]";
+      myObjectStr = '"' + myObject + '"';
+      
+      // inject into DOM
+      document.getElementById("original").innerHTML = myArrayStr;
+      document.getElementById("searchobj").innerHTML = myObjectStr;
+      document.getElementById("fromindex").innerHTML = myFromIndex;
+      document.getElementById("result").innerHTML = myIndex;
+    })();
+  </script>
+</body>
+</html>
